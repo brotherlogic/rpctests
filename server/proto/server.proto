@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package server;
+
+message ServerRequest{
+  int32 rqindex = 1;
+}
+
+message ServerResponse {
+  int32 rsindex = 1;
+}
+
+service Server {
+  rpc Ping(ServerRequest) returns (ServerResponse) {};
+}
